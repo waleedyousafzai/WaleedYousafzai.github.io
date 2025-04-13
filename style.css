@@ -1,0 +1,186 @@
+:root {
+    --neon-green: #0f0;
+    --matrix-green: #00ff41;
+    --hacker-red: #ff0000;
+    --bg-black: #0a0a0a;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--matrix-green);
+    font-family: 'Space Mono', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid var(--neon-green);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.glitch {
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0.05em 0 0 rgba(255,0,0,.75),
+                -0.025em -0.05em 0 rgba(0,255,0,.75),
+                0.025em 0.05em 0 rgba(0,0,255,.75);
+    animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0.05em 0 0 rgba(255,0,0,.75),
+                    -0.05em -0.025em 0 rgba(0,255,0,.75),
+                    -0.025em 0.05em 0 rgba(0,0,255,.75); }
+    14% { text-shadow: 0.05em 0 0 rgba(255,0,0,.75),
+                     -0.05em -0.025em 0 rgba(0,255,0,.75),
+                     -0.025em 0.05em 0 rgba(0,0,255,.75); }
+    15% { text-shadow: -0.05em -0.025em 0 rgba(255,0,0,.75),
+                      0.025em 0.025em 0 rgba(0,255,0,.75),
+                      -0.05em -0.05em 0 rgba(0,0,255,.75); }
+    49% { text-shadow: -0.05em -0.025em 0 rgba(255,0,0,.75),
+                      0.025em 0.025em 0 rgba(0,255,0,.75),
+                      -0.05em -0.05em 0 rgba(0,0,255,.75); }
+    50% { text-shadow: 0.025em 0.05em 0 rgba(255,0,0,.75),
+                      0.05em 0 0 rgba(0,255,0,.75),
+                      0 -0.05em 0 rgba(0,0,255,.75); }
+    99% { text-shadow: 0.025em 0.05em 0 rgba(255,0,0,.75),
+                      0.05em 0 0 rgba(0,255,0,.75),
+                      0 -0.05em 0 rgba(0,0,255,.75); }
+    100% { text-shadow: -0.025em 0 0 rgba(255,0,0,.75),
+                       -0.025em -0.025em 0 rgba(0,255,0,.75),
+                       -0.025em -0.05em 0 rgba(0,0,255,.75); }
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.cert-card {
+    border: 1px solid var(--neon-green);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to bottom, 
+        transparent 0%,
+        rgba(0, 255, 65, 0.2) 50%,
+        transparent 100%);
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+/* YouTube Section Styles */
+.yt-container {
+    border: 1px solid var(--hacker-red);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.yt-glow {
+    animation: yt-pulse 2s infinite;
+}
+
+@keyframes yt-pulse {
+    0% { box-shadow: 0 0 5px var(--hacker-red); }
+    50% { box-shadow: 0 0 20px var(--hacker-red); }
+    100% { box-shadow: 0 0 5px var(--hacker-red); }
+}
+
+.yt-btn {
+    background-color: #FF0000;
+    color: white !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.yt-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Stats Container */
+.stats-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.stats-container img {
+    margin: 0 10px;
+    max-width: 400px;
+}
+
+/* Contact Section */
+.contact-container {
+    text-align: center;
+    border-top: 1px solid var(--neon-green);
+    padding: 2rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: var(--matrix-green);
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border: 1px solid var(--neon-green);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: rgba(0, 255, 65, 0.1);
+}
+
+.yt-link {
+    color: var(--hacker-red) !important;
+    border-color: var(--hacker-red);
+}
+
+/* Matrix Border Animation */
+.matrix-border {
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.matrix-border span {
+    position: fixed;
+    color: var(--matrix-green);
+    opacity: 0.3;
+    animation: matrix-fall linear infinite;
+}
+
+@keyframes matrix-fall {
+    from { transform: translateY(-100vh); }
+    to { transform: translateY(100vh); }
+}
