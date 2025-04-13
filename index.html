@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waleed Yousafzai | Cyber Security Specialist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="matrix-border"></div>
+    
+    <div class="container">
+        <h1 class="glitch">Waleed Yousafzai</h1>
+        <h3>Cyber Security Specialist | Red Team Operator | Ethical Hacker</h3>
+
+        <div class="cert-grid">
+            <!-- Education -->
+            <div class="cert-card">
+                <div class="scan-line"></div>
+                <h2>🎓 Education</h2>
+                <p>Advanced Diploma in Cyber Security<br>PNY Lahore</p>
+            </div>
+
+            <!-- Certifications -->
+            <div class="cert-card">
+                <div class="scan-line"></div>
+                <h2>🔒 Certifications</h2>
+                <ul>
+                    <li>CompTIA Security+ SY0-601/701</li>
+                    <li>CompTIA PenTest+</li>
+                    <li>CEH (Cisco Academy)</li>
+                    <li>CCNA (Cisco Academy)</li>
+                    <li>CISSP (SimpliLearn)</li>
+                    <li>OSCP Training</li>
+                </ul>
+            </div>
+
+            <!-- Internships -->
+            <div class="cert-card">
+                <div class="scan-line"></div>
+                <h2>💼 Cyber Operations</h2>
+                <h4>Mastercard Cybersecurity (Forage)</h4>
+                <ul>
+                    <li>Security Awareness Analysis</li>
+                    <li>Phishing Simulation Design</li>
+                    <li>Threat Response Protocols</li>
+                </ul>
+                
+                <h4>JPMorgan Chase Cybersecurity</h4>
+                <ul>
+                    <li>Financial Fraud Analysis</li>
+                    <li>Application Security Fundamentals</li>
+                    <li>Email Classification Systems</li>
+                </ul>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="cert-card">
+                <div class="scan-line"></div>
+                <h2>⚡ Capabilities</h2>
+                <ul>
+                    <li>Network Penetration Testing</li>
+                    <li>Web App Security Testing</li>
+                    <li>Red Team Operations</li>
+                    <li>GDPR Compliance Audits</li>
+                    <li>Digital Forensics</li>
+                    <li>Incident Response</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- YouTube Section -->
+        <div class="yt-container yt-glow">
+            <h2>📺 Offensive Security Hub</h2>
+            <p>Explore cutting-edge cybersecurity techniques:</p>
+            <ul>
+                <li>Red Team Operations Walkthroughs</li>
+                <li>Penetration Testing Tutorials</li>
+                <li>Security Tool Deep Dives</li>
+                <li>CTF Challenge Solutions</li>
+            </ul>
+            <a href="https://www.youtube.com/@OffensiveSecurityHub-p1m" 
+               class="yt-btn" 
+               target="_blank"
+               rel="noopener noreferrer">
+                ▶️ Visit YouTube Channel
+            </a>
+            <div class="scan-line" style="background: rgba(255,0,0,0.3);"></div>
+        </div>
+
+        <!-- GitHub Stats -->
+        <div class="stats-container">
+            <img src="https://github-readme-stats.vercel.app/api?username=WaleedYousafzai&show_icons=true&theme=dark" 
+                 alt="GitHub Stats">
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=WaleedYousafzai&theme=dark" 
+                 alt="GitHub Streak">
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-container">
+            <h3>📡 Connect With Me</h3>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/walid-islam-79302b236/" class="social-link">LinkedIn</a>
+                <a href="https://github.com/WaleedYousafzai" class="social-link">GitHub</a>
+                <a href="https://www.youtube.com/@OffensiveSecurityHub-p1m" class="social-link yt-link">YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Matrix rain effect
+        function createMatrix() {
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()";
+            const container = document.querySelector('.matrix-border');
+            
+            for(let i = 0; i < 50; i++) {
+                const span = document.createElement('span');
+                span.style.left = Math.random() * 100 + '%';
+                span.style.animationDelay = Math.random() * 5 + 's';
+                span.textContent = chars[Math.floor(Math.random() * chars.length)];
+                container.appendChild(span);
+            }
+        }
+        createMatrix();
+    </script>
+</body>
+</html>
